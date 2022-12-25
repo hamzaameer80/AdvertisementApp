@@ -1,0 +1,700 @@
+﻿<%@ Master Language="VB" CodeFile="hacims_masterpage_fixAssest.master.vb" Inherits="hacims_masterpage_admin" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<!DOCTYPE HTML>
+<html>
+<head runat="server">
+<meta charset="utf-8">
+    <title>Financial</title>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Custom fonts for this template-->
+
+      <%-- -----------Bootstrap form -------------------------------------------------%>
+
+    <link href="material-pro/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="material-pro/minisidebar/css/style.css" rel="stylesheet" />
+    <!-- You can change the theme colors from here -->
+    <link href="material-pro/minisidebar/css/colors/default-dark.css" rel="stylesheet" />
+
+
+    <%-- -------------bootstrap form -----------------------------------------------------------------%>
+
+     <%-- -----------START  DATATABLE  DATATABLE -----------------------------------------------------%>
+
+    <link href="material-pro/assets/plugins/datatables/media/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+     <%-- -----------END DATATABLEDATATABLE ----------------------------------------------------------%>
+
+    <%-- Date Picker---------------------------------------------------------------------------------------%>
+    <link href="material-pro/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+    <link href="material-pro/assets/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet" />
+     <link href="material-pro/assets/plugins/jquery-asColorPicker-master/css/asColorPicker.html" rel="stylesheet">
+    <!-- Date picker plugins css -->
+    <link href="material-pro/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+     <!-- Daterange picker plugins css -->
+    <link href="material-pro/assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" />
+    <link href="material-pro/assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <%-- Date Picker ------------------------------------------------------------------------------------------%>
+	<link href="css_hacims/class_content11.css????v=2" rel="stylesheet" type="text/css" media="screen, projection" /> 
+	
+	
+    <link rel="stylesheet" href="tdc_resources/css/style_tdc.css?????????????????" type="text/css" />
+    <!--<script type="text/javascript" src="tdc_resources/js/jquery.min.js??"></script>-->
+    <link rel="icon" type="image/png" href="tdc_resources/images/favicon.ico">  
+	<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+   
+
+    <script src="<%# Page.ResolveClientUrl("~/Scripts/jquery-3.1.min.js?") %>" type="text/javascript" language="javascript"></script>
+  	<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/tdc_resources/js/js.cookie.js")%>"></script>
+	<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/tdc_resources/js/mask.min.js")%>"></script>
+	<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/rt.min.js")%>"></script>
+ 
+	
+	<link rel="stylesheet" href="~/css_hacims/jquery_ui/themes/base/jquery.ui.all.css">
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.core.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.widget.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.mouse.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.draggable.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.position.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.resizable.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.dialog.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.datepicker.js")%>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/validate.js")%>"></script>
+	 
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+	 
+	<style type="text/css">
+	
+    .header_right span.hs_dpt.grey { color:#b1b1b1; }
+    .header_right span.hs_dpt.blue { color:#3366CC; }
+	.header_right span.hs_logout.red { color:#CC0000; }
+	
+	.btn_hacims {
+	display: inline-block;
+	width: auto;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 33px;
+	color: #fff;
+	background: #008ec2;
+	text-decoration: none;
+	font-size: 15px;
+	text-align: center;
+	line-height: 34px;
+	border-radius: 4px;
+	transition: background-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+	font-family: "Myriad Pro"; text-shadow:0px 1px 1px rgba(0,0,0,0); 
+}
+.btn_hacims:hover, .btn_hacims:focus, .btn_hacims:active {
+	outline: none;
+	background: #17469e;
+}
+    
+    </style>
+	 <script type="text/javascript">
+        $(document).ready(function(e) {
+
+            var cdate = new Date();
+            var cyear = cdate.getFullYear();
+            $("#cyear").html(cyear);
+			  
+     // var spinner = new Spinner(opts);
+	// spinner.stop();
+	// spinner.spin();	
+   	//$(".btn_hacims").append(spinner.el);
+	//$(".btn_hacims").css("text-indent", "-9999px");
+		 	
+			 $('.Grid_1 tr').click(function () {
+             $('.Grid_1 tr').removeClass('gridedit');
+             $(this).addClass('gridedit');
+            });
+		//////////////////////////////////////	
+			 $(document).on('click','nav a',function(e){
+				 
+						var linktxt = $(this).text();
+						//$(".pageTitle").html(linktxt);
+						Cookies.set('pagetitle', linktxt);
+				  		
+				 });	
+				
+				var pageTitle = Cookies.get('pagetitle');
+				console.log(pageTitle);
+				if(pageTitle!="null"){
+				$(".pageTitle").html(pageTitle);  
+				}
+				  
+				 $('nav a:contains("'+pageTitle+'")').parent().parent().prev().parent().css('background', '#008ec2');
+				//$('nav a:contains("'+pageTitle+'")').parent().css('background', 'rgba(158,158,158,.5)');
+				
+		//////////////////////////////////////
+        });
+
+    </script>
+	<script type="text/javascript" language="javascript">
+    $(function () {
+        $(".box").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+        $(".openbox").click(function () {
+            $(".box").dialog("open");
+
+            return false;
+        });
+    });
+	
+ </script>
+
+ <script type="text/javascript" language="javascript">
+
+     $(document).ready(function () {        
+             $('.captxt').bind('keyup', function () {
+                 var val = $(this).val().toUpperCase()
+                 $(this).val(val);
+              });  
+     });
+
+</script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $(".intdata").keydown(function (event) {
+
+
+
+            if (!(event.keyCode == 8
+        || event.keyCode == 46
+		|| event.keyCode == 9
+		 || event.keyCode == 190
+        || (event.keyCode >= 35 && event.keyCode <= 40)
+        || (event.keyCode >= 48 && event.keyCode <= 57)
+
+        || (event.keyCode >= 96 && event.keyCode <= 105))
+        ) {
+                event.preventDefault();
+            }
+
+
+
+        });
+    });
+
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#button").click(function(){
+        $("#hide").toggle();
+    });
+});
+</script>
+    <script>
+$(document).ready(function(){
+    $("#button2").click(function(){
+        $("#hide2").toggle();
+    });
+});
+</script>
+
+
+
+
+<script type="text/javascript">	
+    
+        $(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',
+            currentText: 'Now'
+
+        });
+
+        $(".datepicker").datepicker('setDate', new Date());
+    });
+
+
+</script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+		        <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>--%>
+		<div class="hinfo" Style="display:none;">
+            <asp:Image ID="Image1" runat="server" CssClass="hslogo" />
+            <asp:Label ID="hospital" runat="server" Text="Label" CssClass="hsname"></asp:Label>
+        </div>
+    	<div id="feedb" style="display:none;"><a id="A1" href="~/administrator/feedback.aspx" runat="server" class="feed"></a></div>
+     
+	 <header>
+        <div id="logo_tdc_main"></div>
+        <ul class="header_right">
+            <li><span class="hs_doc" title="User Name">Welcome! <asp:Label ID="LabelDoctorName" runat="server" ToolTip="User Name"></asp:Label></span><span class="hs_dpt grey" title="User Designation"><asp:Label ID="Label_Designation" runat="server" ToolTip="User Designation"></asp:Label></span><span class="hs_dpt" title="User Department"><asp:Label ID="Label_SubDepartment" runat="server" ToolTip="User Deprartment" Text="Label_SubDepartment"></asp:Label></span><span class="hs_dpt blue" title="Home Page"><asp:HyperLink ID="hlHome" runat="server" Text="Home" CssClass="cpass" style="color:#396bcf;"></asp:HyperLink></span><span class="hs_dpt blue"><a id="AB" href="~/change_password.aspx" style="color:#396bcf;" runat="server">Change Password</a></span><span class="hs_logout red"><a id="A2" href="~/login.aspx" title="Logout" runat="server">Logout</a></span></li>
+            <li><asp:Label ID="LabelDate" runat="server" ToolTip="Current Date" style="color:#333;"></asp:Label></li>
+        </ul>
+ 
+
+    </header>
+    <nav>
+         <asp:Menu ID="menuBarr" runat="server" Orientation="Horizontal"  RenderingMode="List" StaticEnableDefaultPopOutImage="false"  MaximumDynamicDisplayLevels="10">
+                                            <StaticMenuItemStyle CssClass="StaticMenuItemStyle2" />
+                                            <StaticHoverStyle CssClass="StaticHoverStyle" />
+                                            <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+
+                                            <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+                                            <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+
+                                        </asp:Menu>
+    </nav>
+ 
+										
+										
+            <asp:Menu ID="menuBarr2" runat="server" Visible="false" Orientation="Horizontal" CssClass="" MaximumDynamicDisplayLevels="10">
+
+                                        <StaticMenuItemStyle CssClass="StaticMenuItemStyle" />
+                                        <StaticHoverStyle CssClass="StaticHoverStyle" />
+                                        <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+
+                                        <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+                                        <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+                                    </asp:Menu>
+    
+    
+    
+            <asp:Menu ID="menuBarr3" runat="server" Visible="false" Orientation="Vertical" CssClass="" MaximumDynamicDisplayLevels="10">
+
+                            <StaticMenuItemStyle CssClass="menuXs" />
+                            <StaticHoverStyle CssClass="menuXsHover" />
+                            <StaticSelectedStyle CssClass="" />
+
+                            <DynamicHoverStyle CssClass="menuXsHoverDynamic2" />
+                            <DynamicMenuItemStyle CssClass="menuXsHoverDynamic" />
+                        </asp:Menu>
+     
+ 
+
+
+
+    <div class="content_main">
+        <div class="main_bx">
+			  <div class="pageTitle"></div>
+			  <div class="pageContent">
+			  
+              <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>	
+			  
+			   <asp:Label ID="label_i_f" runat="server" Visible="false"></asp:Label>
+                <br />
+                
+
+                <asp:HiddenField ID="HiddenFieldPage_Name" runat="server" />
+                <asp:HiddenField ID="HiddenFieldPage" runat="server" />
+				
+ 			  </div>
+        </div>
+        <!--main_bx-->
+    </div>
+    <!--content_main-->
+
+<%--    <div class="copyright">&copy; <span id="cyear"></span> - All rights reserved - <a href="#" target="_blank">Power By Tab-Sole Technologies</a></div>--%>
+    
+ 
+ 
+	
+<asp:HyperLink ID="ExpItems" Visible="false" runat="server" style="font-size:larger" NavigateUrl="~/Store/ItemMinMaxExp.aspx" Text="Expire Items" CssClass="text-danger" Font-Bold="true"></asp:HyperLink>
+  <%--<span class="spltr">|&nbsp;</span><asp:HyperLink ID="hlnkDemoPage" CssClass="cpass" runat="server" 
+            NavigateUrl="~/DemoHome.aspx" Text="Demo"></asp:HyperLink>--%>
+     <asp:Literal ID="ltrDemo" runat="server" Text=""></asp:Literal>    
+             
+    
+    
+    <%--<span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="lnk"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="Pt_EMR\Pt_PatientsList.aspx" Text="Patient list"></asp:HyperLink><span class="subspan"> | </span> </span>
+    <span style="disply:none; position: relative;    top: 3px;" ><asp:HyperLink ID="lnkOutstanding"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="Pt_EMR\OutStandingEpisodesPatients.aspx" Text="Outstanding Episodes"></asp:HyperLink><span class="subspan"> | </span>  </span>               
+        <span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="HyperLink1"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="Pt_EMR\OutStandingResultsPatients.aspx" Text="Outstanding Pathology Result"></asp:HyperLink><span class="subspan">  | </span></span>          
+        <span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="HyperLink2"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="#" Text="Outstanding Investigation"></asp:HyperLink> <span class="subspan">  | </span> </span> 
+        <span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="HyperLink3"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="#" Text="Screening Episodes"></asp:HyperLink> <span class="subspan">  | </span> </span>          --%>
+    
+    
+    
+    
+    
+        <!-- Bootstrap core JavaScript-->
+  <script src="../Theme/vendor/jquery/jquery.min.js"></script>
+  <script src="../Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="../Theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="../Theme/js/sb-admin-2.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="../Theme/vendor/chart.js/Chart.min.js"></script>
+  <!-- Page level custom scripts -->
+  <script src="../Theme/js/demo/chart-area-demo.js"></script>
+  <script src="../Theme/js/demo/chart-pie-demo.js"></script>
+
+         <!-- Bootstrap core JavaScript-->
+  <script src="../Theme/vendor/jquery/jquery.min.js"></script>
+  <script src="../Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../Theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../Theme/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../Theme/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="../Theme/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../Theme/js/demo/datatables-demo.js"></script>
+
+   <%-- --------------------bootstap forms ------------------------------%>
+    <script data-cfasync="false" src="../../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="../material-pro//assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../material-pro/assets/plugins/popper/popper.min.js"></script>
+    <script src="../material-pro/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+        <script src="../material-pro/minisidebar/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+        <script src="../material-pro/minisidebar/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <!--stickey kit -->
+    <script src="../material-pro/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="../material-pro/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+        <script src="../material-pro/minisidebar/js/custom.min.js"></script>
+    <script>
+    //For validation with custom styles
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+        <script src="../material-pro/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+       <%-- ------------------------basic forms END-------------- --%>
+
+        <%-- ------------------------------------START DATATABLE ---------------------------------%>
+
+    <!-- This is data table -->
+        <script src="../material-pro/assets/plugins/datatables/datatables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+        <script src="../material-pro/assets/plugins/datatables/downloads/dataTables.buttons.min.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/dataTables.buttons.min.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/buttons.flash.min.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/jszip.min.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/build/pdfmake.min.js"></script>
+        <script src="material-pro/assets/plugins/datatables/downloads/build/pdfmake.min.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/vfs_fonts.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/js/buttons.html5.min.js"></script>
+        <script src="material-pro/assets/plugins/datatables/downloads/buttons.html5.min.js"></script>
+    <script src="../material-pro/assets/plugins/datatables/downloads/buttons.print.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+    <!-- end - This is for export functionality only -->
+   
+        <script>
+                $('.displayExport').DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                });
+        </script>
+
+   <script>
+    /*******************************************/
+    // Basic Date Range Picker
+    /*******************************************/
+    $('.daterange').daterangepicker();
+
+    /*******************************************/
+    // Date & Time
+    /*******************************************/
+    $('.datetime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+            format: 'MM/DD/YYYY h:mm A'
+        }
+    });
+
+    /*******************************************/
+    //Calendars are not linked
+    /*******************************************/
+    $('.timeseconds').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        timePicker24Hour: true,
+        timePickerSeconds: true,
+        locale: {
+            format: 'MM-DD-YYYY h:mm:ss'
+        }
+    });
+
+    /*******************************************/
+    // Single Date Range Picker
+    /*******************************************/
+    $('.singledate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    });
+
+    /*******************************************/
+    // Auto Apply Date Range
+    /*******************************************/
+    $('.autoapply').daterangepicker({
+        autoApply: true,
+    });
+
+    /*******************************************/
+    // Calendars are not linked
+    /*******************************************/
+    $('.linkedCalendars').daterangepicker({
+        linkedCalendars: false,
+    });
+
+    /*******************************************/
+    // Date Limit
+    /*******************************************/
+    $('.dateLimit').daterangepicker({
+        dateLimit: {
+            days: 7
+        },
+    });
+
+    /*******************************************/
+    // Show Dropdowns
+    /*******************************************/
+    $('.showdropdowns').daterangepicker({
+        showDropdowns: true,
+    });
+
+    /*******************************************/
+    // Show Week Numbers
+    /*******************************************/
+    $('.showweeknumbers').daterangepicker({
+        showWeekNumbers: true,
+    });
+
+    /*******************************************/
+    // Date Ranges
+    /*******************************************/
+    $('.dateranges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    });
+
+    /*******************************************/
+    // Always Show Calendar on Ranges
+    /*******************************************/
+    $('.shawCalRanges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        alwaysShowCalendars: true,
+    });
+
+    /*******************************************/
+    // Top of the form-control open alignment
+    /*******************************************/
+    $('.drops').daterangepicker({
+        drops: "up" // up/down
+    });
+
+    /*******************************************/
+    // Custom button options
+    /*******************************************/
+    $('.buttonClass').daterangepicker({
+        drops: "up",
+        buttonClasses: "btn",
+        applyClass: "btn-info",
+        cancelClass: "btn-danger"
+    });
+
+    /*******************************************/
+    // Language
+    /*******************************************/
+    $('.localeRange').daterangepicker({
+        ranges: {
+            "Aujourd'hui": [moment(), moment()],
+            'Hier': [moment().subtract('days', 1), moment().subtract('days', 1)],
+            'Les 7 derniers jours': [moment().subtract('days', 6), moment()],
+            'Les 30 derniers jours': [moment().subtract('days', 29), moment()],
+            'Ce mois-ci': [moment().startOf('month'), moment().endOf('month')],
+            'le mois dernier': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+        },
+        locale: {
+            applyLabel: "Vers l'avant",
+            cancelLabel: 'Annulation',
+            startLabel: 'Date initiale',
+            endLabel: 'Date limite',
+            customRangeLabel: 'SÃ©lectionner une date',
+            // daysOfWeek: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi','Samedi'],
+            daysOfWeek: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+            monthNames: ['Janvier', 'fÃ©vrier', 'Mars', 'Avril', 'ÐœÐ°i', 'Juin', 'Juillet', 'AoÃ»t', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+            firstDay: 1
+        }
+    });
+    </script>
+    <script>
+    // MAterial Date picker    
+    $('#mdate').bootstrapMaterialDatePicker({
+        weekStart: 0,
+        time: false
+    });
+    $('#timepicker').bootstrapMaterialDatePicker({
+        format: 'HH:mm',
+        time: true,
+        date: false
+    });
+    $('#date-format').bootstrapMaterialDatePicker({
+        format: 'dddd DD MMMM YYYY - HH:mm'
+    });
+
+    $('#min-date').bootstrapMaterialDatePicker({
+        format: 'DD/MM/YYYY HH:mm',
+        minDate: new Date()
+    });
+    // Clock pickers
+    $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    }).find('input').change(function() {
+        console.log(this.value);
+    });
+    $('#check-minutes').click(function(e) {
+        // Have to stop propagation here
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+    // Colorpicker
+    $(".colorpicker").asColorPicker();
+    $(".complex-colorpicker").asColorPicker({
+        mode: 'complex'
+    });
+    $(".gradient-colorpicker").asColorPicker({
+        mode: 'gradient'
+    });
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+    // Daterange picker
+    $('.input-daterange-datepicker').daterangepicker({
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-daterange-timepicker').daterangepicker({
+        timePicker: true,
+        format: 'MM/DD/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false,
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-limit-datepicker').daterangepicker({
+        format: 'MM/DD/YYYY',
+        minDate: '06/01/2015',
+        maxDate: '06/30/2015',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse',
+        dateLimit: {
+            days: 6
+        }
+    });
+    </script>
+        <script src="material-pro/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+      <script src="material-pro/assets/plugins/moment/moment.js"></script>
+        <script src="material-pro/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+        <script src="material-pro/assets/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="material-pro/assets/plugins/jquery-asColorPicker-master/libs/jquery-asColor.html"></script>
+    <script src="material-pro/assets/plugins/jquery-asColorPicker-master/libs/jquery-asGradient.html"></script>
+    <script src="material-pro/assets/plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="material-pro/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="material-pro/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="material-pro/assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="material-pro/assets/plugins/moment/moment.js"></script>
+ <%-- ------------------------------------END DATATABLE---------------------------------  --%>
+    </form>
+</body>
+
+</html>

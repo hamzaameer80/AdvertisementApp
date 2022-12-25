@@ -1,0 +1,386 @@
+﻿<%@ Master Language="VB" CodeFile="hacims_masterpage_admin.master.vb" Inherits="hacims_masterpage_admin" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<!DOCTYPE HTML>
+<html>
+<head runat="server">
+<meta charset="utf-8">
+    <title>Financial</title>
+     <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Custom fonts for this template-->
+
+  <link href="Theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+      <link href="Theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <script src="Theme/scripts/DataTables/jquery.min.js"></script>
+    <link href="Theme/scripts/DataTables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="Theme/scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="Theme/scripts/DataTables/jquery.dataTables.min.js"></script>
+  <!-- Custom styles for this template-->
+  <link href="Theme/css/sb-admin-2.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+  <link href="Theme/css/sb-admin-2.min.css" rel="stylesheet">
+
+      <script type="text/javascript">
+                        $(function () {
+                            $(".display").DataTable(
+                            {
+                                bLengthChange: true,
+                                lengthMenu: [[5, 10, -1], [5, 10, "All"]],
+                                bFilter: true,
+                                bSort: true,
+                                bPaginate: true
+                            });
+                        });
+                    </script>
+  <link href="Theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+      <link href="Theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <script src="Theme/scripts/DataTables/jquery.min.js"></script>
+    <link href="Theme/scripts/DataTables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="Theme/scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="Theme/scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="Theme/scripts/DataTables/jquery.min.js"></script>
+  <!-- Custom styles for this template-->
+  <link href="Theme/css/sb-admin-2.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+  <link href="Theme/css/sb-admin-2.min.css" rel="stylesheet">
+
+   
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	
+	<link href="css_hacims/class_content11.css????v=2" rel="stylesheet" type="text/css" media="screen, projection" /> 
+	
+	
+    <link rel="stylesheet" href="tdc_resources/css/style_tdc.css?????????????????" type="text/css" />
+    <!--<script type="text/javascript" src="tdc_resources/js/jquery.min.js??"></script>-->
+    <link rel="icon" type="image/png" href="tdc_resources/images/favicon.ico">  
+	<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+   
+
+    <script src="<%# Page.ResolveClientUrl("~/Scripts/jquery-3.1.min.js?") %>" type="text/javascript" language="javascript"></script>
+  	<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/tdc_resources/js/js.cookie.js")%>"></script>
+	<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/tdc_resources/js/mask.min.js")%>"></script>
+	<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/rt.min.js")%>"></script>
+ 
+	
+	<link rel="stylesheet" href="~/css_hacims/jquery_ui/themes/base/jquery.ui.all.css">
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.core.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.widget.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.mouse.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.draggable.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.position.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.resizable.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.dialog.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.datepicker.js")%>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/validate.js")%>"></script>
+	 
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+	 
+	<style type="text/css">
+	
+    .header_right span.hs_dpt.grey { color:#b1b1b1; }
+    .header_right span.hs_dpt.blue { color:#3366CC; }
+	.header_right span.hs_logout.red { color:#CC0000; }
+	
+	.btn_hacims {
+	display: inline-block;
+	width: auto;
+	min-width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 33px;
+	color: #fff;
+	background: #008ec2;
+	text-decoration: none;
+	font-size: 15px;
+	text-align: center;
+	line-height: 34px;
+	border-radius: 4px;
+	transition: background-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+	font-family: "Myriad Pro"; text-shadow:0px 1px 1px rgba(0,0,0,0); 
+}
+.btn_hacims:hover, .btn_hacims:focus, .btn_hacims:active {
+	outline: none;
+	background: #17469e;
+}
+    
+    </style>
+	 <script type="text/javascript">
+        $(document).ready(function(e) {
+
+            var cdate = new Date();
+            var cyear = cdate.getFullYear();
+            $("#cyear").html(cyear);
+			  
+     // var spinner = new Spinner(opts);
+	// spinner.stop();
+	// spinner.spin();	
+   	//$(".btn_hacims").append(spinner.el);
+	//$(".btn_hacims").css("text-indent", "-9999px");
+		 	
+			 $('.Grid_1 tr').click(function () {
+             $('.Grid_1 tr').removeClass('gridedit');
+             $(this).addClass('gridedit');
+            });
+		//////////////////////////////////////	
+			 $(document).on('click','nav a',function(e){
+				 
+						var linktxt = $(this).text();
+						//$(".pageTitle").html(linktxt);
+						Cookies.set('pagetitle', linktxt);
+				  		
+				 });	
+				
+				var pageTitle = Cookies.get('pagetitle');
+				console.log(pageTitle);
+				if(pageTitle!="null"){
+				$(".pageTitle").html(pageTitle);  
+				}
+				  
+				 $('nav a:contains("'+pageTitle+'")').parent().parent().prev().parent().css('background', '#008ec2');
+				//$('nav a:contains("'+pageTitle+'")').parent().css('background', 'rgba(158,158,158,.5)');
+				
+		//////////////////////////////////////
+        });
+
+    </script>
+	<script type="text/javascript" language="javascript">
+    $(function () {
+        $(".box").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+        $(".openbox").click(function () {
+            $(".box").dialog("open");
+
+            return false;
+        });
+    });
+	
+ </script>
+
+ <script type="text/javascript" language="javascript">
+
+     $(document).ready(function () {        
+             $('.captxt').bind('keyup', function () {
+                 var val = $(this).val().toUpperCase()
+                 $(this).val(val);
+              });  
+     });
+
+</script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $(".intdata").keydown(function (event) {
+
+
+
+            if (!(event.keyCode == 8
+        || event.keyCode == 46
+		|| event.keyCode == 9
+		 || event.keyCode == 190
+        || (event.keyCode >= 35 && event.keyCode <= 40)
+        || (event.keyCode >= 48 && event.keyCode <= 57)
+
+        || (event.keyCode >= 96 && event.keyCode <= 105))
+        ) {
+                event.preventDefault();
+            }
+
+
+
+        });
+    });
+
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#button").click(function(){
+        $("#hide").toggle();
+    });
+});
+</script>
+    <script>
+$(document).ready(function(){
+    $("#button2").click(function(){
+        $("#hide2").toggle();
+    });
+});
+</script>
+
+
+
+
+<script type="text/javascript">	
+    
+        $(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',
+            currentText: 'Now'
+
+        });
+
+        $(".datepicker").datepicker('setDate', new Date());
+    });
+
+
+</script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+		        <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>--%>
+		<div class="hinfo" Style="display:none;">
+            <asp:Image ID="Image1" runat="server" CssClass="hslogo" />
+            <asp:Label ID="hospital" runat="server" Text="Label" CssClass="hsname"></asp:Label>
+        </div>
+    	<div id="feedb" style="display:none;"><a id="A1" href="~/administrator/feedback.aspx" runat="server" class="feed"></a></div>
+     
+	 <header>
+        <div id="logo_tdc_main"></div>
+        <ul class="header_right">
+            <li><span class="hs_doc" title="User Name">Welcome! <asp:Label ID="LabelDoctorName" runat="server" ToolTip="User Name"></asp:Label></span><span class="hs_dpt grey" title="User Designation"><asp:Label ID="Label_Designation" runat="server" ToolTip="User Designation"></asp:Label></span><span class="hs_dpt" title="User Department"><asp:Label ID="Label_SubDepartment" runat="server" ToolTip="User Deprartment" Text="Label_SubDepartment"></asp:Label></span><span class="hs_dpt blue" title="Home Page"><asp:HyperLink ID="hlHome" runat="server" Text="Home" CssClass="cpass" style="color:#396bcf;"></asp:HyperLink></span><span class="hs_dpt blue"><a id="AB" href="~/change_password.aspx" style="color:#396bcf;" runat="server">Change Password</a></span><span class="hs_logout red"><a id="A2" href="~/login.aspx" title="Logout" runat="server">Logout</a></span></li>
+            <li><asp:Label ID="LabelDate" runat="server" ToolTip="Current Date" style="color:#333;"></asp:Label></li>
+        </ul>
+ 
+
+    </header>
+    <nav>
+         <asp:Menu ID="menuBarr" runat="server" Orientation="Horizontal"  RenderingMode="List" StaticEnableDefaultPopOutImage="false"  MaximumDynamicDisplayLevels="10">
+                                            <StaticMenuItemStyle CssClass="StaticMenuItemStyle2" />
+                                            <StaticHoverStyle CssClass="StaticHoverStyle" />
+                                            <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+
+                                            <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+                                            <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+
+                                        </asp:Menu>
+    </nav>
+ 
+										
+										
+            <asp:Menu ID="menuBarr2" runat="server" Visible="false" Orientation="Horizontal" CssClass="" MaximumDynamicDisplayLevels="10">
+
+                                        <StaticMenuItemStyle CssClass="StaticMenuItemStyle" />
+                                        <StaticHoverStyle CssClass="StaticHoverStyle" />
+                                        <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+
+                                        <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+                                        <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+                                    </asp:Menu>
+    
+    
+    
+            <asp:Menu ID="menuBarr3" runat="server" Visible="false" Orientation="Vertical" CssClass="" MaximumDynamicDisplayLevels="10">
+
+                            <StaticMenuItemStyle CssClass="menuXs" />
+                            <StaticHoverStyle CssClass="menuXsHover" />
+                            <StaticSelectedStyle CssClass="" />
+
+                            <DynamicHoverStyle CssClass="menuXsHoverDynamic2" />
+                            <DynamicMenuItemStyle CssClass="menuXsHoverDynamic" />
+                        </asp:Menu>
+     
+ 
+
+
+
+    <div class="content_main">
+        <div class="main_bx">
+			  <div class="pageTitle"></div>
+			  <div class="pageContent">
+			  
+              <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>	
+			  
+			   <asp:Label ID="label_i_f" runat="server" Visible="false"></asp:Label>
+                <br />
+                
+
+                <asp:HiddenField ID="HiddenFieldPage_Name" runat="server" />
+                <asp:HiddenField ID="HiddenFieldPage" runat="server" />
+				
+ 			  </div>
+        </div>
+        <!--main_bx-->
+    </div>
+    <!--content_main-->
+
+    <div class="copyright">&copy; <span id="cyear"></span> - All rights reserved - <a href="#" target="_blank">Power By Tab-Sole Technologies</a></div>
+    
+ 
+ 
+	
+<asp:HyperLink ID="ExpItems" Visible="false" runat="server" style="font-size:larger" NavigateUrl="~/Store/ItemMinMaxExp.aspx" Text="Expire Items" CssClass="text-danger" Font-Bold="true"></asp:HyperLink>
+  <%--<span class="spltr">|&nbsp;</span><asp:HyperLink ID="hlnkDemoPage" CssClass="cpass" runat="server" 
+            NavigateUrl="~/DemoHome.aspx" Text="Demo"></asp:HyperLink>--%>
+     <asp:Literal ID="ltrDemo" runat="server" Text=""></asp:Literal>    
+             
+    
+    
+    <%--<span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="lnk"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="Pt_EMR\Pt_PatientsList.aspx" Text="Patient list"></asp:HyperLink><span class="subspan"> | </span> </span>
+    <span style="disply:none; position: relative;    top: 3px;" ><asp:HyperLink ID="lnkOutstanding"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="Pt_EMR\OutStandingEpisodesPatients.aspx" Text="Outstanding Episodes"></asp:HyperLink><span class="subspan"> | </span>  </span>               
+        <span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="HyperLink1"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="Pt_EMR\OutStandingResultsPatients.aspx" Text="Outstanding Pathology Result"></asp:HyperLink><span class="subspan">  | </span></span>          
+        <span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="HyperLink2"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="#" Text="Outstanding Investigation"></asp:HyperLink> <span class="subspan">  | </span> </span> 
+        <span style=" position: relative;    top: 3px;" ><asp:HyperLink ID="HyperLink3"   ForeColor="White" Font-Size="1em" runat="server" NavigateUrl="#" Text="Screening Episodes"></asp:HyperLink> <span class="subspan">  | </span> </span>          --%>
+    
+    
+    
+    
+    
+        <!-- Bootstrap core JavaScript-->
+  <script src="Theme/vendor/jquery/jquery.min.js"></script>
+  <script src="Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="Theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="Theme/js/sb-admin-2.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="Theme/vendor/chart.js/Chart.min.js"></script>
+  <!-- Page level custom scripts -->
+  <script src="Theme/js/demo/chart-area-demo.js"></script>
+  <script src="Theme/js/demo/chart-pie-demo.js"></script>
+
+         <!-- Bootstrap core JavaScript-->
+  <script src="Theme/vendor/jquery/jquery.min.js"></script>
+  <script src="Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="Theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="Theme/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="Theme/Theme/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="Theme/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="Theme/js/demo/datatables-demo.js"></script>
+
+    </form>
+</body>
+
+</html>
